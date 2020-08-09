@@ -9,52 +9,39 @@
                     <div class="item-wrap">
                         <div class="row">
                             <div class="col-md-12">
-                                <form id="contactForm" name="contactform" data-toggle="validator" class="popup-form">
+                                <form id="contactForm" name="contactform" class="popup-form" (ngSubmit)="submit()"
+                                    [formGroup]="forma">
                                     <div class="row justify-content-center">
-                                        <div id="msgContactSubmit" class="hidden"></div>
-
                                         <div class="form-group col-sm-8">
-                                            <div class="help-block with-errors"></div>
                                             <input name="fname" id="fname" placeholder="Ingresa tu Nombre y Apellido"
-                                                class="form-control" type="text" required
-                                                data-error="Por favor ingresa tu nombre">
-                                            <div class="input-group-icon"><i class="fa fa-user"></i></div>
-                                        </div><!-- end form-group -->
+                                                class="form-control" type="text" formControlName="nombre">
+                                            <small class="form-invalid" *ngIf="forma.controls['nombre'].errors?.required && forma.get('nombre').touched">*El campo es requerido</small>
+                                        </div>
                                         <div class="form-group col-sm-8">
-                                            <div class="help-block with-errors"></div>
-                                            <input name="email" id="email" placeholder="E-mail"
-                                                pattern=".*@\w{2,}\.\w{2,}" class="form-control" type="email" required
-                                                data-error="Por favor ingresa un correo electrónico válido">
-                                            <div class="input-group-icon"><i class="fa fa-envelope"></i></div>
-                                        </div><!-- end form-group -->
+                                            <input name="email" id="email" placeholder="E-mail" class="form-control"
+                                                type="email" formControlName="email">
+                                            <small class="form-invalid" *ngIf="forma.controls['email'].errors?.required && forma.get('email').touched">*El campo es requerido</small>
+                                            <small class="form-invalid" *ngIf="forma.controls['email'].errors?.email && forma.controls['email'].value != ''">*El formato es incorrecto</small>
+                                        </div>
                                         <div class="form-group col-sm-8">
-                                            <div class="help-block with-errors"></div>
                                             <input name="phone" id="phone" placeholder="Teléfono" class="form-control"
-                                                type="text" required
-                                                data-error="Por favor ingresa tu número de teléfono">
-                                            <div class="input-group-icon"><i class="fa fa-phone"></i></div>
-                                        </div><!-- end form-group -->
+                                                type="number" formControlName="telefono">
+                                            <small class="form-invalid" *ngIf="forma.controls['telefono'].errors?.required && forma.get('telefono').touched">*El campo es requerido</small>
+                                        </div>
                                         <div class="form-group col-sm-8">
-                                            <div class="help-block with-errors"></div>
                                             <input name="subject" id="subject" placeholder="Asunto" class="form-control"
-                                                type="text" required data-error="Por favor ingresa el asunto">
-                                            <div class="input-group-icon"><i class="fa fa-book"></i></div>
-                                        </div><!-- end form-group -->
+                                                formControlName="asunto" type="text">
+                                            <small class="form-invalid" *ngIf="forma.controls['asunto'].errors?.required && forma.get('asunto').touched">*El campo es requerido</small>
+                                        </div>
                                         <div class="form-group col-sm-8">
-                                            <div class="help-block with-errors"></div>
                                             <textarea rows="3" name="message" id="message" placeholder="Mensaje"
-                                                class="form-control" required
-                                                data-error="Por favor ingresa un mensaje"></textarea>
-                                            <div class="textarea input-group-icon"><i class="fa fa-pencil"></i></div>
-                                        </div><!-- end form-group -->
+                                                formControlName="mensaje" class="form-control"></textarea>
+                                            <small class="form-invalid" *ngIf="forma.controls['mensaje'].errors?.required && forma.get('mensaje').touched">*El campo es requerido</small>
+                                        </div>
                                         <div class="form-group last col-sm-8">
-                                            <input type="checkbox" data-required="1" name="terminos"><span>Aceptar los
-                                                <a href="terminos.php">Términos y Condiciones</a></span>
-                                        </div><!-- end form-group -->
-                                        <div class="form-group last col-sm-8">
-                                            <button type="submit" id="submit" class="btn btn-primary py-3 px-5"><i
-                                                    class='fa fa-envelope'></i> Enviar</button>
-                                        </div><!-- end form-group -->
+                                            <button type="submit" id="submit"
+                                                class="btn btn-primary py-3 px-5" [disabled]="forma.invalid">Enviar</button>
+                                        </div>
                                         <div class="clearfix"></div>
                                     </div><!-- end row -->
                                 </form><!-- end form -->
