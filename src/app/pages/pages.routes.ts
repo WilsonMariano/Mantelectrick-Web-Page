@@ -12,8 +12,8 @@ const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'quienes-somos', component: QuienesSomosComponent },
     { path: 'proyectos', component: ProyectosComponent },
-    { path: 'contacto', component: ContactoComponent }
-    // { path: '**', component: NopagefoundComponent }
+    { path: 'contacto', component: ContactoComponent },
+    { path: '**', component: HomeComponent }
 ];
 
 

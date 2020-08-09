@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { CarouselComponent } from './carousel/carousel.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CounterComponent } from './counter/counter.component';
@@ -24,7 +28,9 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     QuienesSomosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule,
+    FontAwesomeModule
   ],
   exports: [
     CarouselComponent,
