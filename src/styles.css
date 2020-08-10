@@ -14,22 +14,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-fa-icon {
-    color: #fff !important;
-}
-
-/* .bg-primary {
-  background: #000 !important;
-}
-
-.bg-secondary {
-  background: #1d1d1d !important;
-}
-
-.bg-tertiary {
-  background: #911318 !important;
-} */
-
 [class^="flaticon-"]:before {
 
   font-size: 70px;

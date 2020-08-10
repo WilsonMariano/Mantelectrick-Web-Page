@@ -8814,7 +8814,8 @@
       bottom: 0;
       content: '';
       opacity: .8;
-      background: #1A4682; }
+      background: #1A4682; 
+    }
   
   .staff {
     overflow: hidden;

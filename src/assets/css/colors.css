@@ -1,0 +1,47 @@
+fa-icon {
+    color: #fff !important;
+}
+
+h1 {
+  color: #b55b5f !important;
+}
+
+.ftco-navbar-light, .bg-primary {
+  background: #911318 !important;
+}
+
+.btn.btn-solicitar {
+  background: #000;
+  border-color: #000;
+}
+
+.btn.btn-secondary, .btn.btn-primary {
+  background: #000;
+  border-color:#000;
+}
+
+.btn-primary:hover, .btn-secondary:hover{
+  background: #333 !important;
+  border-color: #333 !important;
+}
+
+.topper .icon {
+  background: #000 !important;
+}
+
+.ftco-footer { 
+  background-color: #000 !important;
+}
+
+#section-counter:after {
+  background: #1d1d1d !important;
+}
+
+.ftco-intro .overlay {
+  opacity: 0.6;
+  background: #911318; 
+}
+
+.owl-carousel.home-slider .slider-item .slider-text h1 span {
+  color:#464545;
+}
