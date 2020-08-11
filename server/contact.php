@@ -13,10 +13,10 @@
     $asunto = $data->asunto;
     $consulta = $data->mensaje;
 
-    $emailDestino = "info@mantelectrick.com";
+    $emailDestino = "obra@mantelectrick.com";
        
 
-    $mensaje = "E-mail: " . $email .PHP_EOL. "Nombre: " . $nombre .PHP_EOL. "Teléfono: " . $telefono .PHP_EOL. "Consulta: " . $consulta;
+    $mensaje = "E-mail: " . $email .PHP_EOL. "Nombre: " . $nombre .PHP_EOL. "Telefono: " . $telefono .PHP_EOL. "Consulta: " . $consulta;
 
     if(mail($emailDestino, $asunto, $mensaje)) {
         http_response_code(200);

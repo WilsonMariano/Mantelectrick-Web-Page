@@ -1,7 +1,7 @@
 <section id="contact-form-section" class="form-content-wrap top-bottom">
     <div class="container container-fluid p-0">
         <div class="col-md-12 text-center heading-section ftco-animate">
-            <h2 class="mb-4 text-center">Contactate con Nosotros</h2>
+            <h2 class="mb-4 mt-5 text-center">Contactate con Nosotros</h2>
         </div>
         <div class="row">
             <div class="tab-content">
@@ -38,7 +38,7 @@
                                                 formControlName="mensaje" class="form-control"></textarea>
                                             <small class="form-invalid" *ngIf="forma.controls['mensaje'].errors?.required && forma.get('mensaje').touched">*El campo es requerido</small>
                                         </div>
-                                        <div class="form-group last col-sm-8">
+                                        <div class="form-group last col-sm-8 text-center">
                                             <button type="submit" id="submit" class="btn btn-primary py-3 px-5" [hidden]="_http.loading">Enviar</button>
                                             <fa-icon [hidden]="!_http.loading" [icon]="faSpinner" [spin]="true" size="4x" class="spinner"></fa-icon>
                                         </div>
