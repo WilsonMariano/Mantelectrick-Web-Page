@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -33,7 +34,8 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule
   ],
   exports: [
     CarouselComponent,

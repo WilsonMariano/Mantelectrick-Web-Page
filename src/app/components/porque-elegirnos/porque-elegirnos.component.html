@@ -34,7 +34,8 @@
                             <small class="form-invalid" *ngIf="forma.controls['mensaje'].errors?.required && forma.get('mensaje').touched">*El campo es requerido</small>
                         </div>
                         <div class="form-group">
-                            <input type="submit" id="submit" value="Enviar" class="btn btn-primary py-3 px-4">
+                            <input type="submit" id="submit" value="Enviar" class="btn btn-primary py-3 px-4" [hidden]="_http.loading">
+                            <fa-icon [hidden]="!_http.loading" [icon]="faSpinner" [spin]="true" size="4x"></fa-icon>
                         </div>
                     </form>
                 </div>

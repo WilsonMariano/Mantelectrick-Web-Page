@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { HttpService } from '../../services/http.service';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-porque-elegirnos',
@@ -8,8 +10,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class PorqueElegirnosComponent implements OnInit {
 
   public forma: FormGroup;
+  public faSpinner = faSpinner;
 
-  constructor() { }
+  constructor(public _http: HttpService) { }
 
   ngOnInit() {
     this.forma = new FormGroup({
@@ -22,7 +25,9 @@ export class PorqueElegirnosComponent implements OnInit {
   }
 
   public submit() {
-      console.log(this.forma);
+    if(this.forma.valid) {
+      this._http.sendMessage(this.forma);
+    }
   }
 
 }
