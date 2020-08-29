@@ -7,48 +7,74 @@
                         <span class="subheading">Cumplí tus sueños ahora</span>
                         <h3>Solicite un presupuesto</h3>
                     </div>
-                    <form id="contactForm" name="contactform" class="request-form ftco-animate" (ngSubmit)="submit()" [formGroup]="forma">
+                    <form id="contactForm" name="contactform" class="request-form ftco-animate" (ngSubmit)="submit()"
+                        [formGroup]="forma">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="fname" id="fname" placeholder="Nombre" formControlName="nombre">
-                            <small class="form-invalid" *ngIf="forma.controls['nombre'].errors?.required && forma.get('nombre').touched">*El campo es requerido</small>
+                            <input type="text" class="form-control" name="fname" id="fname" placeholder="Nombre"
+                                formControlName="nombre">
+                            <small class="form-invalid"
+                                *ngIf="forma.controls['nombre'].errors?.required && forma.get('nombre').touched">*El
+                                campo es requerido</small>
                         </div>
                         <div class="form-group">
                             <div class="form-field">
                                 <div class="form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="E-mail" formControlName="email">
-                                    <small class="form-invalid" *ngIf="forma.controls['email'].errors?.required && forma.get('email').touched">*El campo es requerido</small>
-                                    <small class="form-invalid" *ngIf="forma.controls['email'].errors?.email && forma.controls['email'].value != ''">*El formato es incorrecto</small>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="E-mail" formControlName="email">
+                                    <small class="form-invalid"
+                                        *ngIf="forma.controls['email'].errors?.required && forma.get('email').touched">*El
+                                        campo es requerido</small>
+                                    <small class="form-invalid"
+                                        *ngIf="forma.controls['email'].errors?.email && forma.controls['email'].value != ''">*El
+                                        formato es incorrecto</small>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="number" class="form-control" name="phone" id="phone" placeholder="Teléfono" formControlName="telefono">
-                            <small class="form-invalid" *ngIf="forma.controls['telefono'].errors?.required && forma.get('telefono').touched">*El campo es requerido</small>
+                            <input type="number" class="form-control" name="phone" id="phone" placeholder="Teléfono"
+                                formControlName="telefono">
+                            <small class="form-invalid"
+                                *ngIf="forma.controls['telefono'].errors?.required && forma.get('telefono').touched">*El
+                                campo es requerido</small>
                         </div>
                         <div class="form-group">
-                                <input name="subject" id="subject" placeholder="Asunto" class="form-control" type="text" formControlName="asunto">
-                                <small class="form-invalid" *ngIf="forma.controls['asunto'].errors?.required && forma.get('asunto').touched">*El campo es requerido</small>
-                            </div>
-                        <div class="form-group">
-                            <textarea name="message" id="message" cols="30" rows="2" class="form-control" placeholder="Escribinos" formControlName="mensaje"></textarea>
-                            <small class="form-invalid" *ngIf="forma.controls['mensaje'].errors?.required && forma.get('mensaje').touched">*El campo es requerido</small>
+                            <input name="subject" id="subject" placeholder="Asunto" class="form-control" type="text"
+                                formControlName="asunto">
+                            <small class="form-invalid"
+                                *ngIf="forma.controls['asunto'].errors?.required && forma.get('asunto').touched">*El
+                                campo es requerido</small>
                         </div>
                         <div class="form-group">
-                            <button type="submit" id="submit" class="btn btn-primary py-3 px-4" [hidden]="_http.loading">Enviar</button>
-                            <fa-icon [hidden]="!_http.loading" [icon]="faSpinner" [spin]="true" size="4x" class="spinner"></fa-icon>
+                            <textarea name="message" id="message" cols="30" rows="2" class="form-control"
+                                placeholder="Escribinos" formControlName="mensaje"></textarea>
+                            <small class="form-invalid"
+                                *ngIf="forma.controls['mensaje'].errors?.required && forma.get('mensaje').touched">*El
+                                campo es requerido</small>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit" class="btn btn-primary py-3 px-4"
+                                [hidden]="_http.loading">Enviar</button>
+                            <fa-icon [hidden]="!_http.loading" [icon]="faSpinner" [spin]="true" size="4x"
+                                class="spinner"></fa-icon>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="col-md-8 wrap-about py-5 ftco-animate">
-          <div class="heading-section mb-5">
-            <h2 class="mb-4">Por qué elegirnos</h2>
-          </div>
-          <div class="">
-                        <p class="mb-5">Nos caracterizamos por resolver desafíos <i>non stop</i>, las oficinas de Peya Cerrito de 500m2 se construyeron en una semana. Se realizaron mobiliarios nuevos,
-                        eléctrica, pintura, armado de sector comedor, cableado RJ con su respectiva rakera, un proceso <i>just in time</i>.</p>
-                    </div>
+                <div class="heading-section mb-5">
+                    <h2 class="mb-4">Por qué elegirnos</h2>
+                    <p class="mb-5">Nos caracterizamos por resolver desafíos <i>non stop</i>, las oficinas de Peya
+                        Cerrito de 500m2 se construyeron en una semana. Se realizaron mobiliarios nuevos,
+                        eléctrica, pintura, armado de sector comedor, cableado RJ con su respectiva rakera, un proceso
+                        <i>just in time</i>.
+                    </p>
+                    <h3 class="mb-4">Modalidad facility</h3>
+                    <p class="mb-5">Gracias a un Sistema Web llamado <a target="_blank" href="https://www.controlfacility.net/">Control Facility</a> podemos trabajar con 
+                        Modalidad Facility, para que las sucursales, oficinas, supermercados y toda obra que realizamos 
+                        tenga una gestión eficiente y en línea del mantenimiento.
+                    </p>
                 </div>
+            </div>
         </div>
     </div>
 </section>

@@ -5,7 +5,8 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-porque-elegirnos',
-  templateUrl: './porque-elegirnos.component.html'
+  templateUrl: './porque-elegirnos.component.html',
+  styleUrls: ['.//porque-elegirnos.component.css']
 })
 export class PorqueElegirnosComponent implements OnInit {
 
